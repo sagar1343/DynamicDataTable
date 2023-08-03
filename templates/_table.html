@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/_table.html">
+  <style>
+    table{
+    margin: 0 auto;
+
+}
+table,th,td{
+    border: 2px solid rgb(254, 254, 254);
+    border-collapse: collapse;
+}
+th{
+    padding: 12px 35px;
+    background-color: black;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: rgb(141, 238, 207);
+}
+tr{
+    text-align: center;
+    padding: 12px 35px;
+}
+
+
+  </style>
+</head>
+<body>
+  <table >
+    <tr>
+    {% for items in headings %}
+      <th>{{items}}</th>
+      {% endfor %}
+    </tr>
+
+    {% for data in data %}
+    <tr>
+      {% for cells in data %}
+        <td>{{cells}}
+        {% endfor %}
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
